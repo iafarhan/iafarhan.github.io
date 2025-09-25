@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ahmad Farhan — AI Systems & Computational Biology</title>
+  <meta name="description" content="Ahmad Farhan — AI systems for large-model inference (hybrid sharding, encrypted pipelines) and single-cell modeling." />
+  <meta name="theme-color" content="#0F4539" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="assets/style.css" />
+  <meta property="og:title" content="Ahmad Farhan — AI Systems & Computational Biology">
+  <meta property="og:description" content="Hybrid sharding, encrypted inference pipelines, diffusion/LLM systems; scFATE for single-cell perturbations.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://iafarhan.github.io">
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Ahmad Farhan",
+  "url": "https://iafarhan.github.io",
+  "email": "mailto:afarhan.nu@gmail.com",
+  "sameAs": [
+    "https://github.com/iafarhan",
+    "https://www.linkedin.com/in/imafarhan/",
+    "https://x.com/nesaorg"
+  ],
+  "affiliation": {
+    "@type": "Organization",
+    "name": "Nesa Research",
+    "url": "https://nesa.ai/about"
+  },
+  "jobTitle": "AI Lead / Core Systems Contributor",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Nesa Research"
+  }
+}
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#"><span class="mono">ahmad</span> farhan</a>
+      <nav class="nav">
+        <a href="#publications">Publications</a>
+        <a href="#systems">Systems Work</a>
+        <a href="#teaching">Teaching</a>
+        <a href="#contact">Contact</a>
+        <button id="themeToggle" aria-label="Toggle theme" title="Toggle theme">◐</button>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <h1>AI Systems & Computational Biology</h1>
+        <p>
+          Research engineer building <strong>scalable inference systems</strong> for large models
+          (hybrid sharding, NCCL pipelines, encrypted inference) and
+          <strong>mechanistic models</strong> for single-cell biology (scFATE).
+        </p>
+        <div class="cta">
+          <a class="btn" href="mailto:afarhan.nu@gmail.com">Email</a>
+          <a class="btn ghost" href="https://github.com/iafarhan">GitHub</a>
+          <a class="btn ghost" href="https://www.linkedin.com/in/imafarhan/">LinkedIn</a>
+        </div>
+        <ul class="stats">
+          <li><a href="https://x.com/nesaorg/status/1944457466097332326" target="_blank" rel="noopener">12.8M+ orchestrator pulls</a></li>
+          <li>20k+ LLM tokens/s</li>
+          <li><a href="https://www.bnbchain.org/en/blog/meet-the-most-valuable-builder-mvb-season-7-cohort" target="_blank" rel="noopener">MVB S7 cohort</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="hero-art"></div>
+  </section>
+
+  <section id="publications" class="section container">
+    <div class="section-head">
+      <h2>Publications</h2>
+      <div class="filters">
+        <label><input type="checkbox" id="togglePreprints" checked> show preprints</label>
+      </div>
+    </div>
+
+    <article class="pub card" data-type="journal">
+      <h3>Mechanistic generative capsule attention networks predict single-cell responses to novel perturbations</h3>
+      <p class="authors">
+        <strong>Ahmad Farhan</strong>, Suraj Verma, Le Minh Thao Doan, Mohammed Moustapha Anwar, Aida Rodriguez‑Jimenez, Maria Angeles Juanes, Annalisa Occhipinti, Claudio Angione
+      </p>
+      <p class="venue">Under review — <em>Nature Methods</em></p>
+      <p class="links">
+        <a href="https://drive.google.com/file/d/1JuHoidmIEWVywtlHlsknNC-ZR1hCc9Hi/view" target="_blank" rel="noopener">manuscript</a>
+      </p>
+    </article>
+
+    <article class="pub card" data-type="conf">
+      <h3>Meta‑Learning for Speeding Up Large Model Inference in Decentralized Environments</h3>
+      <p class="authors">
+        Yipeng Du, Zihao Wang, <strong>Ahmad Farhan</strong>, Claudio Angione, Harry Yang, Fielding Johnston, James P. Buban, Patrick Colangelo, Yue Zhao, Yuzhe Yang
+      </p>
+      <p class="venue">COLM 2025 (main conference)</p>
+      <p class="links">
+        <a href="https://arxiv.org/abs/2508.09194" target="_blank" rel="noopener">arXiv</a> ·
+        <a href="https://colmweb.org/AcceptedPapers.html" target="_blank" rel="noopener">accepted list</a>
+      </p>
+    </article>
+
+    <article class="pub card" data-type="workshop">
+      <h3>Towards Secure and Private AI: A Framework for Decentralized Inference</h3>
+      <p class="authors">
+        Hongyang Zhang, Yue Zhao, Chao Yang, <strong>Ahmad Farhan</strong>, Fielding Johnston
+      </p>
+      <p class="venue">NeurIPS 2024 Workshop — RBFM</p>
+      <p class="links">
+        <a href="https://openreview.net/pdf?id=yAPPj6nGwJ" target="_blank" rel="noopener">OpenReview</a> ·
+        <a href="https://arxiv.org/abs/2407.19401" target="_blank" rel="noopener">arXiv</a>
+      </p>
+    </article>
+
+    <article class="pub card" data-type="workshop">
+      <h3>Model Agnostic Hybrid Sharding for Heterogeneous Distributed Inference</h3>
+      <p class="authors">
+        Claudio Angione, Yue Zhao, Harry Yang, <strong>Ahmad Farhan</strong>, Fielding Johnston, James Buban, Patrick Colangelo
+      </p>
+      <p class="venue">KDD 2024 Workshop — SDBD</p>
+      <p class="links">
+        <a href="https://arxiv.org/abs/2407.19775" target="_blank" rel="noopener">arXiv</a>
+      </p>
+    </article>
+
+    <article class="pub card preprint" data-type="preprint">
+      <h3>Encrypted Large Model Inference: The Equivariant Encryption Paradigm</h3>
+      <p class="authors">
+        James Buban, Hongyang Zhang, Claudio Angione, Harry Yang, <strong>Ahmad Farhan</strong>, Seyfal Sultanov, Michael Du, Xuran Ma, Zihao Wang, Yue Zhao, Arria Owlia, Fielding Johnston, Patrick Colangelo
+      </p>
+      <p class="venue">Preprint</p>
+      <p class="links">
+        <a href="https://arxiv.org/abs/2502.01013" target="_blank" rel="noopener">arXiv</a> ·
+        <a href="https://github.com/nesaorg/nesa" target="_blank" rel="noopener">demo</a>
+      </p>
+    </article>
+  </section>
+
+  <section id="systems" class="section alt">
+    <div class="container">
+      <div class="section-head">
+        <h2>Selected Systems Work</h2>
+      </div>
+
+      <div class="grid">
+        <div class="card project">
+          <h3>Nesa Orchestrator</h3>
+          <p>Hybrid-sharding framework for decentralized inference on heterogeneous GPU miners.</p>
+          <ul class="badges">
+            <li><a href="https://nesa.ai/about" target="_blank" rel="noopener">team</a></li>
+            <li><a href="https://x.com/nesaorg" target="_blank" rel="noopener">social</a></li>
+            <li><a href="https://explorer.nesa.ai/nesa/dashboard" target="_blank" rel="noopener">explorer</a></li>
+            <li><a href="https://github.com/nesaorg/bootstrap" target="_blank" rel="noopener">installation</a></li>
+            <li><a href="https://x.com/nesaorg/status/1944457466097332326" target="_blank" rel="noopener">12.8M+ pulls</a></li>
+          </ul>
+        </div>
+
+        <div class="card project">
+          <h3>Distributed Diffusion Pipelines</h3>
+          <p>DiT/U‑Net partitioned into 1F1B pipeline stages with activation checkpointing, weight sharding, fused attention, and frame‑chunked T2V. NCCL collectives for scale.</p>
+        </div>
+
+        <div class="card project">
+          <h3>LLM Sharding & Serving</h3>
+          <p>Block‑wise sharding across miners with Ulysses‑style sequence parallelism, paged KV, and speculative decoding. 20k+ tokens/s aggregate on large models.</p>
+        </div>
+
+        <div class="card project">
+          <h3>Equivariant Encryption</h3>
+          <p>End‑to‑end inference encryption via learned orthogonal transforms that preserve model symmetries. Implemented for transformers and diffusion.</p>
+          <ul class="badges">
+            <li><a href="https://arxiv.org/abs/2502.01013" target="_blank" rel="noopener">preprint</a></li>
+            <li><a href="https://github.com/nesaorg/nesa" target="_blank" rel="noopener">demo</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="teaching" class="section container">
+    <div class="section-head">
+      <h2>Teaching</h2>
+    </div>
+    <ul class="simple-list">
+      <li>Graduate TA — Machine Learning (Teesside University, 2025)</li>
+      <li>Algorithms — Instructor/Tutor (2025)</li>
+    </ul>
+  </section>
+
+  <section id="contact" class="section alt">
+    <div class="container">
+      <div class="section-head">
+        <h2>Contact</h2>
+      </div>
+      <p>Email: <a href="mailto:afarhan.nu@gmail.com">afarhan.nu@gmail.com</a> · GitHub: <a href="https://github.com/iafarhan">iafarhan</a> · LinkedIn: <a href="https://www.linkedin.com/in/imafarhan/">imafarhan</a></p>
+      <p class="muted">Last updated 2025-09-25.</p>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <small>© 2025 Ahmad Farhan</small>
+      <small><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a></small>
+    </div>
+  </footer>
+
+  <script src="assets/script.js"></script>
+</body>
+</html>
