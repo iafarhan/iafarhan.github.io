@@ -1,4 +1,4 @@
-// Scroll progress bar
+// Scroll progress
 const progress = document.getElementById('progress');
 document.addEventListener('scroll', () => {
   const h = document.documentElement;
@@ -7,26 +7,25 @@ document.addEventListener('scroll', () => {
 });
 
 // Theme toggle with localStorage
-const themeToggle = document.getElementById('themeToggle');
 const root = document.documentElement;
 const saved = localStorage.getItem('theme');
 if (saved === 'light') root.classList.add('light');
-themeToggle?.addEventListener('click', () => {
+document.getElementById('themeToggle')?.addEventListener('click', () => {
   root.classList.toggle('light');
   localStorage.setItem('theme', root.classList.contains('light') ? 'light' : 'dark');
 });
 
 // Preprint toggle
-const preprintToggle = document.getElementById('togglePreprints');
-const preprints = () => Array.from(document.querySelectorAll('.pub.preprint'));
-preprintToggle?.addEventListener('change', () => {
-  preprints().forEach(el => el.style.display = preprintToggle.checked ? '' : 'none');
+const preToggle = document.getElementById('togglePreprints');
+const getPreprints = () => Array.from(document.querySelectorAll('.pub.preprint'));
+preToggle?.addEventListener('change', () => {
+  getPreprints().forEach(el => el.style.display = preToggle.checked ? '' : 'none');
 });
 
 // Active section highlight
 const navLinks = Array.from(document.querySelectorAll('#nav a'));
 const sections = navLinks.map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
-const onIntersect = entries => {
+const obs = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     const id = '#' + entry.target.id;
     const link = navLinks.find(a => a.getAttribute('href') === id);
@@ -35,16 +34,15 @@ const onIntersect = entries => {
       link?.classList.add('active');
     }
   });
-};
-const obs = new IntersectionObserver(onIntersect, { rootMargin: "-50% 0px -45% 0px", threshold: 0 });
+}, {rootMargin: "-55% 0px -40% 0px", threshold: 0});
 sections.forEach(s => obs.observe(s));
 
 // Reveal-on-scroll
-const revealEls = document.querySelectorAll('.reveal .card');
-const revObs = new IntersectionObserver((entries) => {
-  entries.forEach(e => { if (e.isIntersecting){ e.target.classList.add('revealed'); revObs.unobserve(e.target);} });
-}, { threshold: 0.15 });
-revealEls.forEach(el => revObs.observe(el));
+const cards = document.querySelectorAll('.reveal .card');
+const rev = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting){ e.target.classList.add('revealed'); rev.unobserve(e.target);} });
+}, { threshold: 0.12 });
+cards.forEach(el => rev.observe(el));
 
 // Smooth anchor scroll
 document.querySelectorAll('a[href^="#"]').forEach(a => {
@@ -55,15 +53,12 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   });
 });
 
-// Parallax tilt on portrait
-const portrait = document.getElementById('portrait');
-portrait?.addEventListener('mousemove', (e) => {
-  const r = portrait.getBoundingClientRect();
-  const dx = (e.clientX - (r.left + r.width/2)) / r.width;
-  const dy = (e.clientY - (r.top + r.height/2)) / r.height;
-  portrait.style.transform = `rotateX(${ -dy * 6 }deg) rotateY(${ dx * 6 }deg)`;
-});
-portrait?.addEventListener('mouseleave', () => { portrait.style.transform = 'rotate(0deg)'; });
-
-// Back to top
+// Back to top visibility
+const toTop = document.getElementById('toTop');
+const showTop = () => {
+  if (window.scrollY > 600) toTop?.classList.add('show');
+  else toTop?.classList.remove('show');
+};
+showTop();
+document.addEventListener('scroll', showTop);
 document.getElementById('toTop')?.addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}));
